@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function saveData()
+        {
+            var userdata = {
+                name : "Akash",
+                gender : "Male",
+            }
+            localStorage.setItem("name","Drashti");
+            localStorage.setItem("user",JSON.stringify(userdata));
+        }
+        function getData()
+        {
+            var a = localStorage.getItem("name");
+            console.log(a);
+            var b = JSON.parse(localStorage.getItem("user"));
+            console.log(b);
+            console.log("Name is "+b.name);
+        }
+        function removeData()
+        {z
+            localStorage.removeData("name");
+            localStorage.clear();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="saveData()">Save</button>
+    <button onclick="getData()">Get</button>
+    <button onclick="removeData()">Remove</button>
+</body>
+</html>
